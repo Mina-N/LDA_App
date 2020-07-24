@@ -1,3 +1,6 @@
+## Install dependencies
+source("dependencies.R")
+
 ## Shiny
 library(shiny)
 
@@ -9,7 +12,7 @@ library(readxl)
 
 ## Data Visualization Packages
 library(ggplot2)
-library(Rtsne)
+require(Rtsne)
 library(LDAvis)
 
 ## Text Mining Pacakges
