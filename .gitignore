@@ -1,0 +1,5 @@
+*.png
+topic_group_words.csv
+topic_composition.csv
+lda_model/
+.Rhistory
