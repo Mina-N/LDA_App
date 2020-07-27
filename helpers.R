@@ -571,12 +571,17 @@ run_lda <- function(lda_param, dtm, data, lambda) {
     # TODO: allow user to enter their own acronyms
     k = acronym_lookup(k)
     
+    # TODO: allow user to customize directory
+    lda_model$plot(out.dir = "lda_model", open.browser = FALSE)
+    
+    j = read_json("lda_model/lda.json")
+    j = j$topic.order
+    j = as.integer(j)
+    
+    k = k[, j]
     k = as.data.frame(k)
     
     write_csv(k, "topic_group_words.csv")
-    
-    # TODO: allow user to customize directory
-    lda_model$plot(out.dir = "lda_model", open.browser = FALSE)
     
     # Select necessary columns 
     new_data = inner_join(select(data, Project:PO.Name), d)
