@@ -596,7 +596,7 @@ run_lda <- function(lda_param, dtm, data, lambda) {
     grants <- topic_perc_dist(new_data)
     
     # Output distribution of topic by PO (optional) **
-    topic_dist_PO(grants)
+    #topic_dist_PO(grants)
     
     # TODO: allow users to modify number of topics/output filename
     # Output Grants and Topic Distribution (optional) **
