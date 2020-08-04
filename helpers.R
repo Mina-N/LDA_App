@@ -380,6 +380,10 @@ topic_PO <- function(grants) {
 # Input: grants, a dataframe of grant information
 # Output: grants_mod, a dataframe that contains the percentage breakdown of topics for each grant
 topic_perc_dist <- function(grants) {
+    n = names(grants)
+    n1 = names(select(grants, Project:Topic2))
+    n2 = sort(n[!(n %in% n1)])
+    
     grants_mod = (
         grants %>% select(PO.Name, n2)
         %>% melt(measure.vars = n2, variable.name = "Topic", value.name = "Fraction")
