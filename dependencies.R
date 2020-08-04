@@ -22,4 +22,4 @@ pacman::p_load("data.table","Matrix","text2vec","tm",
                "SnowballC","rARPACK","ggupset")
 
 ## packages required for server.R
-pacman::p_load("servr")
+pacman::p_load("servr", "jsonlite")
