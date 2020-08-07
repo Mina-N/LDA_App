@@ -131,8 +131,8 @@ server <- function(input, output, session) {
         rv$lda_param <- lda_param
         showModal(modalDialog(
             title = "LDA Algorithm Lambda",
-            helpText("Select whether frequency of terms (lambda < 1) or probability of chance
-                     to observe a word in a given topic (lambda = 1) is more important when creating topic keywords."),
+            helpText("Select whether words of topics are most predictive of a topic (lambda < 1) or most closely
+                     associated with a topic (lambda = 1)."),
             sliderInput("lambda_param", 
                         label = "Lambda:",
                         min = 0, max = 1, value = 0),
